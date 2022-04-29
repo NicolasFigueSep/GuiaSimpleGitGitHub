@@ -1,0 +1,44 @@
+Entornos Aprendiendo GIT
+PRIMERO DE TODO -git init
+1: 
+	-git add para añadir al Stagin area
+2:
+	-git commit para poder llevar al repositorio. si añadimos -m podremos escribir un comentario
+3:
+	-git log --oneline para poder ver el estado del repositorio.
+-- PARA VOLVER A EL COMMIT ANTERIOR.........................
+1:
+	-git reset --hard "numero identificativo de la version"
+....................................................................................................
+4:
+	Conseguimos la url de nuestro repositorio creado en GitHub
+5:
+	git remote add origin "url de nuestro repositorio" para pillar el repositorio y poder pasar del local al remoto
+6:
+	git branch -M "nombre del branch"
+7:
+	git push -u origin "nombre del branch" para subir lo que hayamos hecho
+*****Si nos da error
+	1:.git pull --rebase origin "nombre del branch"
+Para actualizar dependiendo de lo que tengamos subidos en la misma rama.
+1: git pull y Automaticamente se cambiara en nuestro proyecto local.
+
+**Para ver el estado y lo que tenemos en la carpeta que estemos situado usaremos GIT STATUS -S 
+
+CREAR RAMA Y TAL 
+1:git branch rama1
+2:git checkout rama1 para cambiarnos a esa rama
+--Hacemos nuestros cambios y tal 
+3: git add .
+4: git commit -m "comentario y tal"
+5: git push --set-upstream origin rama1
+
+MERGE 
+1: git checkout main para volvernos a la rama principal
+2: git merge "nombre de la rama que queremos hacer merge" **Esto hara que cambie en nuestra rama main pero en nuestra rama local
+3: git push --set-upstream origin "rama main"
+
+HACER VERSION
+1: git tag version1.0 (nombre de version) -m "comentarios y tal"
+2: git push --tags Para llevar al repositorio de GitHub
+   
